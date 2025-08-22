@@ -1,0 +1,95 @@
+<mvc:View xmlns:cards="sap.f.cards" controllerName="mrg.strada.controller.Main" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" core:require="{
+		formatter: 'mrg/strada/model/formatter'
+	}">
+	<Page title="Layout samples" showSubHeader="true" showFooter="true">
+		<customHeader>
+			<OverflowToolbar >
+				<Button type="Back"></Button>
+				<Title text="Different kinds of layouts"></Title>
+				<ToolbarSpacer ></ToolbarSpacer>
+				<Button text="Dark Mode"></Button>
+			</OverflowToolbar>
+		</customHeader>
+		<subHeader>
+			<OverflowToolbar width="100%">
+				<Breadcrumbs currentLocationText="New Book">
+					<Link text="Books"></Link>
+				</Breadcrumbs>
+			</OverflowToolbar>
+		</subHeader>
+		<content>
+			<Title text="Flexbox" level="H1"></Title>
+			<FlexBox justifyContent="Center">
+				<Button text="first"></Button>
+				<Button text="second"></Button>
+				<Button text="third"></Button>
+				<Button text="fourth"></Button>
+			</FlexBox>
+			<FlexBox width="200px" direction="Column" alignItems="End">
+				<Button text="first"></Button>
+				<Button text="second"></Button>
+				<Button text="third"></Button>
+				<Button text="fourth"></Button>
+			</FlexBox>
+
+			<Title text="VBox  HBox" level="H1"></Title>
+			<HBox >
+				<Button text="first"></Button>
+				<Button text="second"></Button>
+				<Button text="third"></Button>
+				<Button text="fourth"></Button>
+			</HBox>
+			<VBox >
+				<Button text="first"></Button>
+				<Button text="second"></Button>
+				<Button text="third"></Button>
+				<Button text="fourth"></Button>
+			</VBox>
+
+			<Title text="Icon Bar Tab" level="H1"></Title>
+			<IconTabBar >
+				<items>
+					<IconTabFilter text="First" icon="sap-icon://bookmark" iconColor="Neutral">
+						<Text text="I'm the first tab"></Text>
+					</IconTabFilter>
+					<IconTabSeparator ></IconTabSeparator>
+					<IconTabFilter text="Second" icon="sap-icon://account" iconColor="Critical">
+						<Text text="I'm the second tab"></Text>
+					</IconTabFilter>
+					<IconTabFilter text="Third" icon="sap-icon://work-history" iconColor="Positive">
+						<Text text="I'm the third tab"></Text>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+
+			<Title text="Panel" level="H1"></Title>
+			<Panel expandable="true" expanded="true" headerText="I'm a Panel">
+				<Text text="I'm the content"></Text>
+			</Panel>
+
+			<Title text="Wizard" level="H1"></Title>
+			<Wizard finishButtonText="Complete">
+				<WizardStep title="Buying" icon="sap-icon://currency" id="firstStep" nextStep="secondStep"></WizardStep>
+				<WizardStep title="Reading" icon="sap-icon://course-book" id="secondStep" nextStep="thirdStep"></WizardStep>
+				<WizardStep title="Rating" icon="sap-icon://favorite" id="thirdStep">
+					<VBox >
+						<Text text="Rate our book"></Text>
+						<RatingIndicator ></RatingIndicator>
+					</VBox>
+				</WizardStep>
+			</Wizard>
+		</content>
+		<footer>
+			<OverflowToolbar >
+				<ToolbarSpacer ></ToolbarSpacer>
+				<Button type="Success" text="Save"></Button>
+				<Button type="Reject" text="Cancel"></Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+
+</mvc:View>

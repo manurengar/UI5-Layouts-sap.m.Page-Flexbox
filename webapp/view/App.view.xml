@@ -1,0 +1,11 @@
+<mvc:View controllerName="mrg.strada.controller.App" displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Shell >
+		<app>
+			<App id="app" />
+		</app>
+	</Shell>
+
+
+</mvc:View>
